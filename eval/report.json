@@ -1,0 +1,3132 @@
+{
+  "question_set": "/Users/siddharthjaiswal/Codebase-navigator/eval/questions.yaml",
+  "questions": 40,
+  "indexes": {
+    "navigator": {
+      "repo_root": "/Users/siddharthjaiswal/Codebase-navigator/src",
+      "built_at": "2026-09-29T10:32:32",
+      "build_seconds": 5.17,
+      "chunks": 207,
+      "files": 17,
+      "chunker_backend": "tree-sitter",
+      "encoder": "tfidf-svd",
+      "encoder_dimension": 206,
+      "vector_backend": "faiss",
+      "vector_backend_available": "faiss",
+      "graph": {
+        "nodes": 207,
+        "call_edges": 198,
+        "contains_edges": 122,
+        "modules": 83,
+        "module_edges": 131,
+        "total_call_sites": 747,
+        "external_call_sites": 482,
+        "in_repo_call_sites": 265,
+        "resolved_exact": 0,
+        "resolved_import": 37,
+        "resolved_suffix": 143,
+        "resolved_jedi": 32,
+        "ambiguous": 83,
+        "unresolved": 53,
+        "jedi_attempted": 83,
+        "jedi_available": true,
+        "resolution_rate": 0.8
+      },
+      "chunk_kinds": {
+        "class": 31,
+        "function": 54,
+        "method": 122
+      }
+    },
+    "campus_qsr": {
+      "repo_root": "/Users/siddharthjaiswal/Campus-QSR/src",
+      "built_at": "2026-09-29T10:32:32",
+      "build_seconds": 0.12,
+      "chunks": 74,
+      "files": 8,
+      "chunker_backend": "tree-sitter",
+      "encoder": "tfidf-svd",
+      "encoder_dimension": 73,
+      "vector_backend": "faiss",
+      "vector_backend_available": "faiss",
+      "graph": {
+        "nodes": 74,
+        "call_edges": 85,
+        "contains_edges": 25,
+        "modules": 25,
+        "module_edges": 39,
+        "total_call_sites": 462,
+        "external_call_sites": 348,
+        "in_repo_call_sites": 114,
+        "resolved_exact": 0,
+        "resolved_import": 36,
+        "resolved_suffix": 49,
+        "resolved_jedi": 0,
+        "ambiguous": 0,
+        "unresolved": 29,
+        "jedi_attempted": 0,
+        "jedi_available": false,
+        "resolution_rate": 0.7456
+      },
+      "chunk_kinds": {
+        "class": 2,
+        "function": 47,
+        "method": 25
+      }
+    }
+  },
+  "gold_validation": {
+    "questions": 40,
+    "problems": 0,
+    "ok": true,
+    "details": []
+  },
+  "retrieval": {
+    "top_k": 10,
+    "modes": {
+      "bm25": {
+        "file_level": {
+          "n": 40,
+          "hit@1": 0.55,
+          "recall@1": 0.55,
+          "precision@1": 0.55,
+          "hit@3": 0.75,
+          "recall@3": 0.75,
+          "precision@3": 0.25,
+          "hit@5": 0.775,
+          "recall@5": 0.775,
+          "precision@5": 0.1783,
+          "hit@10": 0.825,
+          "recall@10": 0.825,
+          "precision@10": 0.1699,
+          "mrr": 0.6385,
+          "map": 0.6385
+        },
+        "function_level": {
+          "n": 40,
+          "hit@1": 0.25,
+          "recall@1": 0.25,
+          "precision@1": 0.25,
+          "hit@3": 0.35,
+          "recall@3": 0.35,
+          "precision@3": 0.1167,
+          "hit@5": 0.45,
+          "recall@5": 0.4375,
+          "precision@5": 0.09,
+          "hit@10": 0.525,
+          "recall@10": 0.5125,
+          "precision@10": 0.0575,
+          "mrr": 0.3264,
+          "map": 0.3254
+        },
+        "by_type": {
+          "lookup": {
+            "file_level": {
+              "n": 6,
+              "hit@1": 0.5,
+              "recall@1": 0.5,
+              "precision@1": 0.5,
+              "hit@3": 0.8333,
+              "recall@3": 0.8333,
+              "precision@3": 0.2778,
+              "hit@5": 0.8333,
+              "recall@5": 0.8333,
+              "precision@5": 0.2222,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.2389,
+              "mrr": 0.6319,
+              "map": 0.6319
+            },
+            "function_level": {
+              "n": 6,
+              "hit@1": 0.1667,
+              "recall@1": 0.1667,
+              "precision@1": 0.1667,
+              "hit@3": 0.1667,
+              "recall@3": 0.1667,
+              "precision@3": 0.0556,
+              "hit@5": 0.5,
+              "recall@5": 0.5,
+              "precision@5": 0.1,
+              "hit@10": 0.5,
+              "recall@10": 0.5,
+              "precision@10": 0.05,
+              "mrr": 0.25,
+              "map": 0.25
+            }
+          },
+          "relational": {
+            "file_level": {
+              "n": 3,
+              "hit@1": 1.0,
+              "recall@1": 1.0,
+              "precision@1": 1.0,
+              "hit@3": 1.0,
+              "recall@3": 1.0,
+              "precision@3": 0.3333,
+              "hit@5": 1.0,
+              "recall@5": 1.0,
+              "precision@5": 0.2167,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.2056,
+              "mrr": 1.0,
+              "map": 1.0
+            },
+            "function_level": {
+              "n": 3,
+              "hit@1": 0.0,
+              "recall@1": 0.0,
+              "precision@1": 0.0,
+              "hit@3": 0.3333,
+              "recall@3": 0.3333,
+              "precision@3": 0.1111,
+              "hit@5": 0.3333,
+              "recall@5": 0.3333,
+              "precision@5": 0.0667,
+              "hit@10": 0.6667,
+              "recall@10": 0.6667,
+              "precision@10": 0.0667,
+              "mrr": 0.1667,
+              "map": 0.1667
+            }
+          },
+          "vocabulary_gap": {
+            "file_level": {
+              "n": 31,
+              "hit@1": 0.5161,
+              "recall@1": 0.5161,
+              "precision@1": 0.5161,
+              "hit@3": 0.7097,
+              "recall@3": 0.7097,
+              "precision@3": 0.2366,
+              "hit@5": 0.7419,
+              "recall@5": 0.7419,
+              "precision@5": 0.1661,
+              "hit@10": 0.7742,
+              "recall@10": 0.7742,
+              "precision@10": 0.1531,
+              "mrr": 0.6048,
+              "map": 0.6048
+            },
+            "function_level": {
+              "n": 31,
+              "hit@1": 0.2903,
+              "recall@1": 0.2903,
+              "precision@1": 0.2903,
+              "hit@3": 0.3871,
+              "recall@3": 0.3871,
+              "precision@3": 0.129,
+              "hit@5": 0.4516,
+              "recall@5": 0.4355,
+              "precision@5": 0.0903,
+              "hit@10": 0.5161,
+              "recall@10": 0.5,
+              "precision@10": 0.0581,
+              "mrr": 0.3566,
+              "map": 0.3554
+            }
+          }
+        },
+        "per_question": [
+          {
+            "id": "nav-01",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.retrieval.bm25.BM25Index"
+          },
+          {
+            "id": "nav-02",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.chunking.models.Chunk.retrieval_text"
+          },
+          {
+            "id": "nav-03",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.ScriptedLLM"
+          },
+          {
+            "id": "nav-04",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.graph.expansion.ExpansionResult"
+          },
+          {
+            "id": "nav-05",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.retrieval.fusion.reciprocal_rank_fusion"
+          },
+          {
+            "id": "nav-06",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.graph.call_graph._resolve_with_jedi"
+          },
+          {
+            "id": "nav-07",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.graph.call_graph._resolve_relative"
+          },
+          {
+            "id": "nav-08",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.react.CodeNavigatorAgent.answer"
+          },
+          {
+            "id": "nav-09",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1111,
+            "top_symbol": "navigator.evaluation.swebench.prepare"
+          },
+          {
+            "id": "nav-10",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.graph.call_graph.ResolutionStats"
+          },
+          {
+            "id": "nav-11",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "navigator.evaluation.harness.evaluate_agent"
+          },
+          {
+            "id": "nav-12",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.retrieval.dense.JinaEncoder.__init__"
+          },
+          {
+            "id": "nav-13",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.3333,
+            "top_symbol": "navigator.index.CodeIndex.search_hybrid"
+          },
+          {
+            "id": "nav-14",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.5,
+            "top_symbol": "navigator.retrieval.vector_store.VectorStore"
+          },
+          {
+            "id": "nav-15",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "navigator.retrieval.dense.save_encoder"
+          },
+          {
+            "id": "nav-16",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.harness.build_indexes"
+          },
+          {
+            "id": "nav-17",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.agent.llm.extract_json"
+          },
+          {
+            "id": "nav-18",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.chunking.models.make_chunk_id"
+          },
+          {
+            "id": "nav-19",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.extract_json"
+          },
+          {
+            "id": "nav-20",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1667,
+            "top_symbol": "navigator.graph.call_graph.CodeGraph.summary"
+          },
+          {
+            "id": "nav-21",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.metrics.MetricAccumulator.summary"
+          },
+          {
+            "id": "nav-22",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.agent.react._condense"
+          },
+          {
+            "id": "nav-23",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.react.CodeNavigatorAgent"
+          },
+          {
+            "id": "nav-24",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.tools.ToolBox._build_specs"
+          },
+          {
+            "id": "nav-25",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.swebench.load_instances"
+          },
+          {
+            "id": "qsr-01",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.monthly_demand"
+          },
+          {
+            "id": "qsr-02",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.calendar_model._classify"
+          },
+          {
+            "id": "qsr-03",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.monthly_demand"
+          },
+          {
+            "id": "qsr-04",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.offpeak.combo_bundling"
+          },
+          {
+            "id": "qsr-05",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-06",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.5,
+            "top_symbol": "campus_qsr.charts.chart_seasonality"
+          },
+          {
+            "id": "qsr-07",
+            "type": "lookup",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.report.build_results"
+          },
+          {
+            "id": "qsr-08",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-09",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.offpeak.subscription"
+          },
+          {
+            "id": "qsr-10",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.throughput.express_eligible_mix"
+          },
+          {
+            "id": "qsr-11",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.report._fmt_inr"
+          },
+          {
+            "id": "qsr-12",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.3333,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-13",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.calendar_model.flat_average_comparison"
+          },
+          {
+            "id": "qsr-14",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.operating_days"
+          },
+          {
+            "id": "qsr-15",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1111,
+            "top_symbol": "campus_qsr.assumptions.Assumptions"
+          }
+        ]
+      },
+      "dense": {
+        "file_level": {
+          "n": 40,
+          "hit@1": 0.425,
+          "recall@1": 0.425,
+          "precision@1": 0.425,
+          "hit@3": 0.775,
+          "recall@3": 0.775,
+          "precision@3": 0.2583,
+          "hit@5": 0.8,
+          "recall@5": 0.8,
+          "precision@5": 0.1888,
+          "hit@10": 0.8,
+          "recall@10": 0.8,
+          "precision@10": 0.1748,
+          "mrr": 0.5729,
+          "map": 0.5729
+        },
+        "function_level": {
+          "n": 40,
+          "hit@1": 0.175,
+          "recall@1": 0.175,
+          "precision@1": 0.175,
+          "hit@3": 0.275,
+          "recall@3": 0.275,
+          "precision@3": 0.0917,
+          "hit@5": 0.4,
+          "recall@5": 0.3875,
+          "precision@5": 0.08,
+          "hit@10": 0.5,
+          "recall@10": 0.475,
+          "precision@10": 0.05,
+          "mrr": 0.2625,
+          "map": 0.2586
+        },
+        "by_type": {
+          "lookup": {
+            "file_level": {
+              "n": 6,
+              "hit@1": 0.3333,
+              "recall@1": 0.3333,
+              "precision@1": 0.3333,
+              "hit@3": 0.8333,
+              "recall@3": 0.8333,
+              "precision@3": 0.2778,
+              "hit@5": 1.0,
+              "recall@5": 1.0,
+              "precision@5": 0.2556,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.2407,
+              "mrr": 0.5972,
+              "map": 0.5972
+            },
+            "function_level": {
+              "n": 6,
+              "hit@1": 0.0,
+              "recall@1": 0.0,
+              "precision@1": 0.0,
+              "hit@3": 0.1667,
+              "recall@3": 0.1667,
+              "precision@3": 0.0556,
+              "hit@5": 0.1667,
+              "recall@5": 0.1667,
+              "precision@5": 0.0333,
+              "hit@10": 0.3333,
+              "recall@10": 0.3333,
+              "precision@10": 0.0333,
+              "mrr": 0.1071,
+              "map": 0.1071
+            }
+          },
+          "relational": {
+            "file_level": {
+              "n": 3,
+              "hit@1": 1.0,
+              "recall@1": 1.0,
+              "precision@1": 1.0,
+              "hit@3": 1.0,
+              "recall@3": 1.0,
+              "precision@3": 0.3333,
+              "hit@5": 1.0,
+              "recall@5": 1.0,
+              "precision@5": 0.2167,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.2167,
+              "mrr": 1.0,
+              "map": 1.0
+            },
+            "function_level": {
+              "n": 3,
+              "hit@1": 0.0,
+              "recall@1": 0.0,
+              "precision@1": 0.0,
+              "hit@3": 0.0,
+              "recall@3": 0.0,
+              "precision@3": 0.0,
+              "hit@5": 0.3333,
+              "recall@5": 0.3333,
+              "precision@5": 0.0667,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.1,
+              "mrr": 0.1537,
+              "map": 0.1537
+            }
+          },
+          "vocabulary_gap": {
+            "file_level": {
+              "n": 31,
+              "hit@1": 0.3871,
+              "recall@1": 0.3871,
+              "precision@1": 0.3871,
+              "hit@3": 0.7419,
+              "recall@3": 0.7419,
+              "precision@3": 0.2473,
+              "hit@5": 0.7419,
+              "recall@5": 0.7419,
+              "precision@5": 0.1731,
+              "hit@10": 0.7419,
+              "recall@10": 0.7419,
+              "precision@10": 0.158,
+              "mrr": 0.5269,
+              "map": 0.5269
+            },
+            "function_level": {
+              "n": 31,
+              "hit@1": 0.2258,
+              "recall@1": 0.2258,
+              "precision@1": 0.2258,
+              "hit@3": 0.3226,
+              "recall@3": 0.3226,
+              "precision@3": 0.1075,
+              "hit@5": 0.4516,
+              "recall@5": 0.4355,
+              "precision@5": 0.0903,
+              "hit@10": 0.4839,
+              "recall@10": 0.4516,
+              "precision@10": 0.0484,
+              "mrr": 0.303,
+              "map": 0.298
+            }
+          }
+        },
+        "per_question": [
+          {
+            "id": "nav-01",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.retrieval.bm25.BM25Index.__len__"
+          },
+          {
+            "id": "nav-02",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.chunking.models.Chunk.retrieval_text"
+          },
+          {
+            "id": "nav-03",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.index.CodeIndex.files"
+          },
+          {
+            "id": "nav-04",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1111,
+            "top_symbol": "navigator.graph.expansion.ExpansionResult"
+          },
+          {
+            "id": "nav-05",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.retrieval.fusion.reciprocal_rank_fusion"
+          },
+          {
+            "id": "nav-06",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.graph.call_graph._resolve_with_jedi"
+          },
+          {
+            "id": "nav-07",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.5,
+            "top_symbol": "navigator.agent.react.AgentAnswer.cited_paths"
+          },
+          {
+            "id": "nav-08",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.LLMResponse"
+          },
+          {
+            "id": "nav-09",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1111,
+            "top_symbol": "navigator.evaluation.swebench.prepare"
+          },
+          {
+            "id": "nav-10",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.cache.ResponseCache.put"
+          },
+          {
+            "id": "nav-11",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.available_providers"
+          },
+          {
+            "id": "nav-12",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.harness.Question"
+          },
+          {
+            "id": "nav-13",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1,
+            "top_symbol": "navigator.index.CodeIndex.search_hybrid"
+          },
+          {
+            "id": "nav-14",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.3333,
+            "top_symbol": "navigator.retrieval.vector_store.VectorStore"
+          },
+          {
+            "id": "nav-15",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.2,
+            "top_symbol": "navigator.retrieval.dense.load_encoder"
+          },
+          {
+            "id": "nav-16",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.chunking.ast_chunker.chunk_repository"
+          },
+          {
+            "id": "nav-17",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.agent.llm.extract_json"
+          },
+          {
+            "id": "nav-18",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.chunking.models.make_chunk_id"
+          },
+          {
+            "id": "nav-19",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.extract_json"
+          },
+          {
+            "id": "nav-20",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "navigator.graph.call_graph.CodeGraph.summary"
+          },
+          {
+            "id": "nav-21",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.metrics.MetricAccumulator.summary"
+          },
+          {
+            "id": "nav-22",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.agent.react._condense"
+          },
+          {
+            "id": "nav-23",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.react.CodeNavigatorAgent"
+          },
+          {
+            "id": "nav-24",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.tools.ToolBox._build_specs"
+          },
+          {
+            "id": "nav-25",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.swebench.load_instances"
+          },
+          {
+            "id": "qsr-01",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.monthly_demand"
+          },
+          {
+            "id": "qsr-02",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.5,
+            "top_symbol": "campus_qsr.assumptions._as_date"
+          },
+          {
+            "id": "qsr-03",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.monthly_demand"
+          },
+          {
+            "id": "qsr-04",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.offpeak.combo_bundling"
+          },
+          {
+            "id": "qsr-05",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-06",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.calendar_model.operating_days"
+          },
+          {
+            "id": "qsr-07",
+            "type": "lookup",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1429,
+            "top_symbol": "campus_qsr.assumptions.Assumptions.total_fixed_monthly"
+          },
+          {
+            "id": "qsr-08",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-09",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.offpeak.subscription"
+          },
+          {
+            "id": "qsr-10",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.assumptions.Assumptions.service_hours_per_day"
+          },
+          {
+            "id": "qsr-11",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.5,
+            "top_symbol": "campus_qsr.charts._inr"
+          },
+          {
+            "id": "qsr-12",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-13",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.calendar_model.flat_average_comparison"
+          },
+          {
+            "id": "qsr-14",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.operating_days"
+          },
+          {
+            "id": "qsr-15",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.assumptions.Assumptions.year_start"
+          }
+        ]
+      },
+      "hybrid": {
+        "file_level": {
+          "n": 40,
+          "hit@1": 0.525,
+          "recall@1": 0.525,
+          "precision@1": 0.525,
+          "hit@3": 0.75,
+          "recall@3": 0.75,
+          "precision@3": 0.25,
+          "hit@5": 0.775,
+          "recall@5": 0.775,
+          "precision@5": 0.1792,
+          "hit@10": 0.8,
+          "recall@10": 0.8,
+          "precision@10": 0.1672,
+          "mrr": 0.6215,
+          "map": 0.6215
+        },
+        "function_level": {
+          "n": 40,
+          "hit@1": 0.25,
+          "recall@1": 0.25,
+          "precision@1": 0.25,
+          "hit@3": 0.3,
+          "recall@3": 0.3,
+          "precision@3": 0.1,
+          "hit@5": 0.425,
+          "recall@5": 0.4125,
+          "precision@5": 0.085,
+          "hit@10": 0.525,
+          "recall@10": 0.5125,
+          "precision@10": 0.055,
+          "mrr": 0.3133,
+          "map": 0.3126
+        },
+        "by_type": {
+          "lookup": {
+            "file_level": {
+              "n": 6,
+              "hit@1": 0.5,
+              "recall@1": 0.5,
+              "precision@1": 0.5,
+              "hit@3": 0.8333,
+              "recall@3": 0.8333,
+              "precision@3": 0.2778,
+              "hit@5": 0.8333,
+              "recall@5": 0.8333,
+              "precision@5": 0.2278,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.2463,
+              "mrr": 0.6574,
+              "map": 0.6574
+            },
+            "function_level": {
+              "n": 6,
+              "hit@1": 0.1667,
+              "recall@1": 0.1667,
+              "precision@1": 0.1667,
+              "hit@3": 0.1667,
+              "recall@3": 0.1667,
+              "precision@3": 0.0556,
+              "hit@5": 0.3333,
+              "recall@5": 0.3333,
+              "precision@5": 0.0667,
+              "hit@10": 0.5,
+              "recall@10": 0.5,
+              "precision@10": 0.05,
+              "mrr": 0.2269,
+              "map": 0.2269
+            }
+          },
+          "relational": {
+            "file_level": {
+              "n": 3,
+              "hit@1": 1.0,
+              "recall@1": 1.0,
+              "precision@1": 1.0,
+              "hit@3": 1.0,
+              "recall@3": 1.0,
+              "precision@3": 0.3333,
+              "hit@5": 1.0,
+              "recall@5": 1.0,
+              "precision@5": 0.2,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.1889,
+              "mrr": 1.0,
+              "map": 1.0
+            },
+            "function_level": {
+              "n": 3,
+              "hit@1": 0.0,
+              "recall@1": 0.0,
+              "precision@1": 0.0,
+              "hit@3": 0.0,
+              "recall@3": 0.0,
+              "precision@3": 0.0,
+              "hit@5": 0.3333,
+              "recall@5": 0.3333,
+              "precision@5": 0.0667,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.1,
+              "mrr": 0.1759,
+              "map": 0.1759
+            }
+          },
+          "vocabulary_gap": {
+            "file_level": {
+              "n": 31,
+              "hit@1": 0.4839,
+              "recall@1": 0.4839,
+              "precision@1": 0.4839,
+              "hit@3": 0.7097,
+              "recall@3": 0.7097,
+              "precision@3": 0.2366,
+              "hit@5": 0.7419,
+              "recall@5": 0.7419,
+              "precision@5": 0.1677,
+              "hit@10": 0.7419,
+              "recall@10": 0.7419,
+              "precision@10": 0.1498,
+              "mrr": 0.578,
+              "map": 0.578
+            },
+            "function_level": {
+              "n": 31,
+              "hit@1": 0.2903,
+              "recall@1": 0.2903,
+              "precision@1": 0.2903,
+              "hit@3": 0.3548,
+              "recall@3": 0.3548,
+              "precision@3": 0.1183,
+              "hit@5": 0.4516,
+              "recall@5": 0.4355,
+              "precision@5": 0.0903,
+              "hit@10": 0.4839,
+              "recall@10": 0.4677,
+              "precision@10": 0.0516,
+              "mrr": 0.3434,
+              "map": 0.3424
+            }
+          }
+        },
+        "per_question": [
+          {
+            "id": "nav-01",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.retrieval.bm25.BM25Index"
+          },
+          {
+            "id": "nav-02",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.chunking.models.Chunk.retrieval_text"
+          },
+          {
+            "id": "nav-03",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.ScriptedLLM"
+          },
+          {
+            "id": "nav-04",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1111,
+            "top_symbol": "navigator.graph.expansion.ExpansionResult"
+          },
+          {
+            "id": "nav-05",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.retrieval.fusion.reciprocal_rank_fusion"
+          },
+          {
+            "id": "nav-06",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.graph.call_graph._resolve_with_jedi"
+          },
+          {
+            "id": "nav-07",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.graph.call_graph._resolve_relative"
+          },
+          {
+            "id": "nav-08",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.react.CodeNavigatorAgent.answer"
+          },
+          {
+            "id": "nav-09",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1111,
+            "top_symbol": "navigator.evaluation.swebench.prepare"
+          },
+          {
+            "id": "nav-10",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.cache.ResponseCache.put"
+          },
+          {
+            "id": "nav-11",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1111,
+            "top_symbol": "navigator.agent.llm.available_providers"
+          },
+          {
+            "id": "nav-12",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.retrieval.dense.JinaEncoder.__init__"
+          },
+          {
+            "id": "nav-13",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1667,
+            "top_symbol": "navigator.index.CodeIndex.search_hybrid"
+          },
+          {
+            "id": "nav-14",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.5,
+            "top_symbol": "navigator.retrieval.vector_store.VectorStore"
+          },
+          {
+            "id": "nav-15",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.2,
+            "top_symbol": "navigator.retrieval.dense.load_encoder"
+          },
+          {
+            "id": "nav-16",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.harness.build_indexes"
+          },
+          {
+            "id": "nav-17",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.agent.llm.extract_json"
+          },
+          {
+            "id": "nav-18",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.chunking.models.make_chunk_id"
+          },
+          {
+            "id": "nav-19",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.extract_json"
+          },
+          {
+            "id": "nav-20",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "navigator.graph.call_graph.CodeGraph.summary"
+          },
+          {
+            "id": "nav-21",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.metrics.MetricAccumulator.summary"
+          },
+          {
+            "id": "nav-22",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.agent.react._condense"
+          },
+          {
+            "id": "nav-23",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.react.CodeNavigatorAgent"
+          },
+          {
+            "id": "nav-24",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.tools.ToolBox._build_specs"
+          },
+          {
+            "id": "nav-25",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.swebench.load_instances"
+          },
+          {
+            "id": "qsr-01",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.monthly_demand"
+          },
+          {
+            "id": "qsr-02",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.calendar_model._classify"
+          },
+          {
+            "id": "qsr-03",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.monthly_demand"
+          },
+          {
+            "id": "qsr-04",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.offpeak.combo_bundling"
+          },
+          {
+            "id": "qsr-05",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-06",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.3333,
+            "top_symbol": "campus_qsr.charts.chart_seasonality"
+          },
+          {
+            "id": "qsr-07",
+            "type": "lookup",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.report.build_results"
+          },
+          {
+            "id": "qsr-08",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-09",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.offpeak.subscription"
+          },
+          {
+            "id": "qsr-10",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.assumptions.Assumptions.service_hours_per_day"
+          },
+          {
+            "id": "qsr-11",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.report._fmt_inr"
+          },
+          {
+            "id": "qsr-12",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-13",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.calendar_model.flat_average_comparison"
+          },
+          {
+            "id": "qsr-14",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.operating_days"
+          },
+          {
+            "id": "qsr-15",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.assumptions.Assumptions._validate"
+          }
+        ]
+      },
+      "hybrid+graph": {
+        "file_level": {
+          "n": 40,
+          "hit@1": 0.525,
+          "recall@1": 0.525,
+          "precision@1": 0.525,
+          "hit@3": 0.75,
+          "recall@3": 0.75,
+          "precision@3": 0.2542,
+          "hit@5": 0.8,
+          "recall@5": 0.8,
+          "precision@5": 0.1996,
+          "hit@10": 0.825,
+          "recall@10": 0.825,
+          "precision@10": 0.194,
+          "mrr": 0.6292,
+          "map": 0.6292
+        },
+        "function_level": {
+          "n": 40,
+          "hit@1": 0.25,
+          "recall@1": 0.25,
+          "precision@1": 0.25,
+          "hit@3": 0.3,
+          "recall@3": 0.3,
+          "precision@3": 0.1,
+          "hit@5": 0.425,
+          "recall@5": 0.4125,
+          "precision@5": 0.085,
+          "hit@10": 0.65,
+          "recall@10": 0.625,
+          "precision@10": 0.0669,
+          "mrr": 0.3328,
+          "map": 0.3288
+        },
+        "by_type": {
+          "lookup": {
+            "file_level": {
+              "n": 6,
+              "hit@1": 0.5,
+              "recall@1": 0.5,
+              "precision@1": 0.5,
+              "hit@3": 0.8333,
+              "recall@3": 0.8333,
+              "precision@3": 0.2778,
+              "hit@5": 0.8333,
+              "recall@5": 0.8333,
+              "precision@5": 0.2278,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.2431,
+              "mrr": 0.6667,
+              "map": 0.6667
+            },
+            "function_level": {
+              "n": 6,
+              "hit@1": 0.1667,
+              "recall@1": 0.1667,
+              "precision@1": 0.1667,
+              "hit@3": 0.1667,
+              "recall@3": 0.1667,
+              "precision@3": 0.0556,
+              "hit@5": 0.3333,
+              "recall@5": 0.3333,
+              "precision@5": 0.0667,
+              "hit@10": 0.6667,
+              "recall@10": 0.6667,
+              "precision@10": 0.0667,
+              "mrr": 0.2546,
+              "map": 0.2546
+            }
+          },
+          "relational": {
+            "file_level": {
+              "n": 3,
+              "hit@1": 1.0,
+              "recall@1": 1.0,
+              "precision@1": 1.0,
+              "hit@3": 1.0,
+              "recall@3": 1.0,
+              "precision@3": 0.3333,
+              "hit@5": 1.0,
+              "recall@5": 1.0,
+              "precision@5": 0.2444,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.2333,
+              "mrr": 1.0,
+              "map": 1.0
+            },
+            "function_level": {
+              "n": 3,
+              "hit@1": 0.0,
+              "recall@1": 0.0,
+              "precision@1": 0.0,
+              "hit@3": 0.0,
+              "recall@3": 0.0,
+              "precision@3": 0.0,
+              "hit@5": 0.3333,
+              "recall@5": 0.3333,
+              "precision@5": 0.0667,
+              "hit@10": 1.0,
+              "recall@10": 1.0,
+              "precision@10": 0.1,
+              "mrr": 0.1759,
+              "map": 0.1759
+            }
+          },
+          "vocabulary_gap": {
+            "file_level": {
+              "n": 31,
+              "hit@1": 0.4839,
+              "recall@1": 0.4839,
+              "precision@1": 0.4839,
+              "hit@3": 0.7097,
+              "recall@3": 0.7097,
+              "precision@3": 0.2419,
+              "hit@5": 0.7742,
+              "recall@5": 0.7742,
+              "precision@5": 0.1898,
+              "hit@10": 0.7742,
+              "recall@10": 0.7742,
+              "precision@10": 0.1807,
+              "mrr": 0.586,
+              "map": 0.586
+            },
+            "function_level": {
+              "n": 31,
+              "hit@1": 0.2903,
+              "recall@1": 0.2903,
+              "precision@1": 0.2903,
+              "hit@3": 0.3548,
+              "recall@3": 0.3548,
+              "precision@3": 0.1183,
+              "hit@5": 0.4516,
+              "recall@5": 0.4355,
+              "precision@5": 0.0903,
+              "hit@10": 0.6129,
+              "recall@10": 0.5806,
+              "precision@10": 0.0638,
+              "mrr": 0.3632,
+              "map": 0.3579
+            }
+          }
+        },
+        "per_question": [
+          {
+            "id": "nav-01",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.retrieval.bm25.BM25Index"
+          },
+          {
+            "id": "nav-02",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.chunking.models.Chunk.retrieval_text"
+          },
+          {
+            "id": "nav-03",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.ScriptedLLM"
+          },
+          {
+            "id": "nav-04",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1667,
+            "top_symbol": "navigator.graph.expansion.ExpansionResult"
+          },
+          {
+            "id": "nav-05",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.retrieval.fusion.reciprocal_rank_fusion"
+          },
+          {
+            "id": "nav-06",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1667,
+            "top_symbol": "navigator.graph.call_graph._resolve_with_jedi"
+          },
+          {
+            "id": "nav-07",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.graph.call_graph._resolve_relative"
+          },
+          {
+            "id": "nav-08",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1667,
+            "top_symbol": "navigator.agent.react.CodeNavigatorAgent.answer"
+          },
+          {
+            "id": "nav-09",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.125,
+            "top_symbol": "navigator.evaluation.swebench.prepare"
+          },
+          {
+            "id": "nav-10",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1667,
+            "top_symbol": "navigator.agent.cache.ResponseCache.put"
+          },
+          {
+            "id": "nav-11",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.available_providers"
+          },
+          {
+            "id": "nav-12",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.retrieval.dense.JinaEncoder.__init__"
+          },
+          {
+            "id": "nav-13",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1111,
+            "top_symbol": "navigator.index.CodeIndex.search_hybrid"
+          },
+          {
+            "id": "nav-14",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.5,
+            "top_symbol": "navigator.retrieval.vector_store.VectorStore"
+          },
+          {
+            "id": "nav-15",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.2,
+            "top_symbol": "navigator.retrieval.dense.load_encoder"
+          },
+          {
+            "id": "nav-16",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1667,
+            "top_symbol": "navigator.evaluation.harness.build_indexes"
+          },
+          {
+            "id": "nav-17",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.agent.llm.extract_json"
+          },
+          {
+            "id": "nav-18",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.chunking.models.make_chunk_id"
+          },
+          {
+            "id": "nav-19",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.llm.extract_json"
+          },
+          {
+            "id": "nav-20",
+            "type": "relational",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "navigator.graph.call_graph.CodeGraph.summary"
+          },
+          {
+            "id": "nav-21",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.metrics.MetricAccumulator.summary"
+          },
+          {
+            "id": "nav-22",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "navigator.agent.react._condense"
+          },
+          {
+            "id": "nav-23",
+            "type": "lookup",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1111,
+            "top_symbol": "navigator.agent.react.CodeNavigatorAgent"
+          },
+          {
+            "id": "nav-24",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.agent.tools.ToolBox._build_specs"
+          },
+          {
+            "id": "nav-25",
+            "type": "vocabulary_gap",
+            "repo": "navigator",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "navigator.evaluation.swebench.load_instances"
+          },
+          {
+            "id": "qsr-01",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.monthly_demand"
+          },
+          {
+            "id": "qsr-02",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.calendar_model._classify"
+          },
+          {
+            "id": "qsr-03",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.monthly_demand"
+          },
+          {
+            "id": "qsr-04",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.offpeak.combo_bundling"
+          },
+          {
+            "id": "qsr-05",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-06",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.3333,
+            "top_symbol": "campus_qsr.charts.chart_seasonality"
+          },
+          {
+            "id": "qsr-07",
+            "type": "lookup",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.report.build_results"
+          },
+          {
+            "id": "qsr-08",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-09",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.offpeak.subscription"
+          },
+          {
+            "id": "qsr-10",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.1,
+            "top_symbol": "campus_qsr.assumptions.Assumptions.service_hours_per_day"
+          },
+          {
+            "id": "qsr-11",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.report._fmt_inr"
+          },
+          {
+            "id": "qsr-12",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 0.25,
+            "top_symbol": "campus_qsr.offpeak.lean_month_bridge"
+          },
+          {
+            "id": "qsr-13",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 1.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 1.0,
+            "symbol_hit@5": 1.0,
+            "symbol_mrr": 1.0,
+            "top_symbol": "campus_qsr.calendar_model.flat_average_comparison"
+          },
+          {
+            "id": "qsr-14",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 1.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.calendar_model.operating_days"
+          },
+          {
+            "id": "qsr-15",
+            "type": "vocabulary_gap",
+            "repo": "campus_qsr",
+            "file_hit@1": 0.0,
+            "file_hit@5": 0.0,
+            "symbol_hit@1": 0.0,
+            "symbol_hit@5": 0.0,
+            "symbol_mrr": 0.0,
+            "top_symbol": "campus_qsr.assumptions.Assumptions._validate"
+          }
+        ]
+      }
+    }
+  },
+  "agent": {
+    "citations": {
+      "answers": 40,
+      "answers_with_no_citation": 0,
+      "total_citations": 120,
+      "valid_citations": 120,
+      "citation_validity_rate": 1.0,
+      "supported_answer_rate": 1.0,
+      "fully_valid_answer_rate": 1.0,
+      "failure_reasons": {}
+    },
+    "answer_file_localisation": {
+      "n": 40,
+      "hit@1": 0.25,
+      "recall@1": 0.25,
+      "precision@1": 0.25,
+      "hit@3": 0.7,
+      "recall@3": 0.7,
+      "precision@3": 0.325,
+      "hit@5": 0.7,
+      "recall@5": 0.7,
+      "precision@5": 0.325,
+      "hit@10": 0.7,
+      "recall@10": 0.7,
+      "precision@10": 0.325,
+      "mrr": 0.45,
+      "map": 0.45
+    },
+    "cited_gold_file_rate": 0.7,
+    "mean_steps": 3.25,
+    "llm_calls": 130,
+    "tool_usage": {
+      "search_code": 40,
+      "read_chunk": 40,
+      "final_answer": 40,
+      "expand_context": 5,
+      "find_callers": 5
+    },
+    "per_question": [
+      {
+        "id": "nav-01",
+        "type": "lookup",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-02",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-03",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-04",
+        "type": "relational",
+        "steps": 5,
+        "tools_used": [
+          "search_code",
+          "expand_context",
+          "read_chunk",
+          "find_callers",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-05",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-06",
+        "type": "vocabulary_gap",
+        "steps": 5,
+        "tools_used": [
+          "search_code",
+          "expand_context",
+          "read_chunk",
+          "find_callers",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-07",
+        "type": "lookup",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-08",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-09",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-10",
+        "type": "vocabulary_gap",
+        "steps": 5,
+        "tools_used": [
+          "search_code",
+          "expand_context",
+          "read_chunk",
+          "find_callers",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-11",
+        "type": "lookup",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-12",
+        "type": "vocabulary_gap",
+        "steps": 5,
+        "tools_used": [
+          "search_code",
+          "expand_context",
+          "read_chunk",
+          "find_callers",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-13",
+        "type": "relational",
+        "steps": 5,
+        "tools_used": [
+          "search_code",
+          "expand_context",
+          "read_chunk",
+          "find_callers",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-14",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-15",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-16",
+        "type": "lookup",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-17",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-18",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-19",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-20",
+        "type": "relational",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-21",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-22",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-23",
+        "type": "lookup",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-24",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "nav-25",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-01",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-02",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-03",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-04",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-05",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-06",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-07",
+        "type": "lookup",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-08",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-09",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-10",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-11",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-12",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-13",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-14",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": true,
+        "stopped_reason": "final_answer"
+      },
+      {
+        "id": "qsr-15",
+        "type": "vocabulary_gap",
+        "steps": 3,
+        "tools_used": [
+          "search_code",
+          "read_chunk",
+          "final_answer"
+        ],
+        "citations": 3,
+        "valid_citations": 3,
+        "citation_validity": 1.0,
+        "supported": true,
+        "cited_gold_file": false,
+        "stopped_reason": "final_answer"
+      }
+    ]
+  }
+}

@@ -1,0 +1,311 @@
+# Hand-verified question set, 40 questions across two repositories.
+#
+# Every gold symbol was checked to resolve to a real indexed chunk; the check
+# runs as part of the evaluation (`--validate-only`) and fails loudly if a gold
+# answer drifts out of the code.
+#
+# Questions are typed, because the types measure different things:
+#
+#   lookup           the question shares vocabulary with the target. Any decent
+#                    lexical retriever should get these, and a failure here is
+#                    a real problem.
+#   vocabulary_gap   the question deliberately avoids the identifier it is
+#                    looking for, phrased the way somebody who has never read
+#                    the code would ask. This is what BM25 alone cannot do and
+#                    the dense arm exists for.
+#   relational       the answer depends on how code connects to other code, so
+#                    the graph has to carry it.
+#
+# Scoring a single blended number over all three would hide which component is
+# doing the work, so the harness reports per-type breakdowns.
+
+repos:
+  navigator:
+    root: "src"
+    description: "This repository."
+  campus_qsr:
+    root: "../Campus-QSR/src"
+    description: "A second, unrelated Python repository, to check the system is not tuned to its own source."
+
+questions:
+  # ---- navigator ------------------------------------------------------
+  - id: nav-01
+    repo: navigator
+    type: lookup
+    question: "Where is Okapi BM25 scoring implemented?"
+    gold_files: ["navigator/retrieval/bm25.py"]
+    gold_symbols: ["navigator.retrieval.bm25.BM25Index.search"]
+
+  - id: nav-02
+    repo: navigator
+    type: vocabulary_gap
+    question: "How does the system avoid cutting a function in half when it prepares text for retrieval?"
+    gold_files: ["navigator/chunking/ast_chunker.py"]
+    gold_symbols: ["navigator.chunking.ast_chunker._ts_chunks", "navigator.chunking.ast_chunker.chunk_source"]
+
+  - id: nav-03
+    repo: navigator
+    type: vocabulary_gap
+    question: "What stops the traversal from pulling in an unbounded amount of surrounding code?"
+    gold_files: ["navigator/graph/expansion.py"]
+    gold_symbols: ["navigator.graph.expansion.expand", "navigator.graph.expansion.estimate_tokens"]
+
+  - id: nav-04
+    repo: navigator
+    type: relational
+    question: "What walks outward from the initial matches along caller and callee links?"
+    gold_files: ["navigator/graph/expansion.py"]
+    gold_symbols: ["navigator.graph.expansion.expand"]
+
+  - id: nav-05
+    repo: navigator
+    type: vocabulary_gap
+    question: "How are two different ranked lists combined without putting their scores on a common scale?"
+    gold_files: ["navigator/retrieval/fusion.py"]
+    gold_symbols: ["navigator.retrieval.fusion.reciprocal_rank_fusion"]
+
+  - id: nav-06
+    repo: navigator
+    type: vocabulary_gap
+    question: "Where does the code decide that something being invoked lives outside this project entirely?"
+    gold_files: ["navigator/graph/call_graph.py"]
+    gold_symbols: ["navigator.graph.call_graph.build_code_graph"]
+
+  - id: nav-07
+    repo: navigator
+    type: lookup
+    question: "How are relative imports turned into absolute module paths?"
+    gold_files: ["navigator/graph/call_graph.py"]
+    gold_symbols: ["navigator.graph.call_graph._resolve_relative"]
+
+  - id: nav-08
+    repo: navigator
+    type: vocabulary_gap
+    question: "What prevents the final response from pointing at a location that does not exist?"
+    gold_files: ["navigator/agent/react.py"]
+    gold_symbols: ["navigator.agent.react.CodeNavigatorAgent.verify_citation"]
+
+  - id: nav-09
+    repo: navigator
+    type: vocabulary_gap
+    question: "How does asking the same thing twice avoid costing anything the second time?"
+    gold_files: ["navigator/agent/cache.py"]
+    gold_symbols: ["navigator.agent.cache.ResponseCache", "navigator.agent.cache.prompt_hash"]
+
+  - id: nav-10
+    repo: navigator
+    type: vocabulary_gap
+    question: "What happens when the first service refuses the request because of rate limits?"
+    gold_files: ["navigator/agent/llm.py"]
+    gold_symbols: ["navigator.agent.llm.LiteLLMClient.complete"]
+
+  - id: nav-11
+    repo: navigator
+    type: lookup
+    question: "Where is the set of tools available to the agent defined?"
+    gold_files: ["navigator/agent/tools.py"]
+    gold_symbols: ["navigator.agent.tools.ToolBox._build_specs"]
+
+  - id: nav-12
+    repo: navigator
+    type: vocabulary_gap
+    question: "How does a question written in plain English reach a name written in mixed case with no spaces?"
+    gold_files: ["navigator/retrieval/tokenize.py"]
+    gold_symbols: ["navigator.retrieval.tokenize.split_identifier"]
+
+  - id: nav-13
+    repo: navigator
+    type: relational
+    question: "Which code calls the rank fusion helper?"
+    gold_files: ["navigator/index.py"]
+    gold_symbols: ["navigator.index.CodeIndex._fuse"]
+
+  - id: nav-14
+    repo: navigator
+    type: vocabulary_gap
+    question: "Where is closeness between two vectors worked out as a dot product?"
+    gold_files: ["navigator/retrieval/vector_store.py"]
+    gold_symbols: ["navigator.retrieval.vector_store.VectorStore.search"]
+
+  - id: nav-15
+    repo: navigator
+    type: vocabulary_gap
+    question: "How can this run without downloading a large pretrained encoder?"
+    gold_files: ["navigator/retrieval/dense.py"]
+    gold_symbols: ["navigator.retrieval.dense.TfidfSvdEncoder", "navigator.retrieval.dense.build_encoder"]
+
+  - id: nav-16
+    repo: navigator
+    type: lookup
+    question: "What builds the searchable index over a repository?"
+    gold_files: ["navigator/index.py"]
+    gold_symbols: ["navigator.index.CodeIndex.build"]
+
+  - id: nav-17
+    repo: navigator
+    type: vocabulary_gap
+    question: "Where does the code recover structured output from a reply that is wrapped in ordinary prose?"
+    gold_files: ["navigator/agent/llm.py"]
+    gold_symbols: ["navigator.agent.llm.extract_json"]
+
+  - id: nav-18
+    repo: navigator
+    type: vocabulary_gap
+    question: "How is a stable name produced for each piece of code so that two separate runs agree?"
+    gold_files: ["navigator/chunking/models.py"]
+    gold_symbols: ["navigator.chunking.models.make_chunk_id"]
+
+  - id: nav-19
+    repo: navigator
+    type: vocabulary_gap
+    question: "What measures how near the top the first correct result lands?"
+    gold_files: ["navigator/evaluation/metrics.py"]
+    gold_symbols: ["navigator.evaluation.metrics.reciprocal_rank"]
+
+  - id: nav-20
+    repo: navigator
+    type: relational
+    question: "What reads the inbound edges for a piece of code?"
+    gold_files: ["navigator/graph/call_graph.py"]
+    gold_symbols: ["navigator.graph.call_graph.CodeGraph.callers"]
+
+  - id: nav-21
+    repo: navigator
+    type: vocabulary_gap
+    question: "Where does the scan decide which directories to leave out?"
+    gold_files: ["navigator/chunking/ast_chunker.py"]
+    gold_symbols: ["navigator.chunking.ast_chunker.iter_source_files"]
+
+  - id: nav-22
+    repo: navigator
+    type: vocabulary_gap
+    question: "How is the message kept from growing without limit as more steps accumulate?"
+    gold_files: ["navigator/agent/react.py"]
+    gold_symbols: ["navigator.agent.react._condense"]
+
+  - id: nav-23
+    repo: navigator
+    type: lookup
+    question: "Where is the ReAct control loop implemented?"
+    gold_files: ["navigator/agent/react.py"]
+    gold_symbols: ["navigator.agent.react.CodeNavigatorAgent.answer"]
+
+  - id: nav-24
+    repo: navigator
+    type: vocabulary_gap
+    question: "What finds an exact phrase that ranking would otherwise bury?"
+    gold_files: ["navigator/agent/tools.py"]
+    gold_symbols: ["navigator.agent.tools.ToolBox.grep_repo"]
+
+  - id: nav-25
+    repo: navigator
+    type: vocabulary_gap
+    question: "How are the leftover unmatched invocations settled using a static analysis library?"
+    gold_files: ["navigator/graph/call_graph.py"]
+    gold_symbols: ["navigator.graph.call_graph._resolve_with_jedi"]
+
+  # ---- campus_qsr -----------------------------------------------------
+  - id: qsr-01
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Where is the volume at which the business stops losing money worked out?"
+    gold_files: ["campus_qsr/pnl.py"]
+    gold_symbols: ["campus_qsr.pnl.break_even"]
+
+  - id: qsr-02
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "How does the model decide whether a given date is busy, normal, or quiet?"
+    gold_files: ["campus_qsr/calendar_model.py"]
+    gold_symbols: ["campus_qsr.calendar_model._classify"]
+
+  - id: qsr-03
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "What works out which step in the process is the slowest and therefore sets the pace?"
+    gold_files: ["campus_qsr/throughput.py"]
+    gold_symbols: ["campus_qsr.throughput.baseline_line", "campus_qsr.throughput._capacity"]
+
+  - id: qsr-04
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Where is the effect of attaching a cut-price drink to an order calculated?"
+    gold_files: ["campus_qsr/offpeak.py"]
+    gold_symbols: ["campus_qsr.offpeak.combo_bundling"]
+
+  - id: qsr-05
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Where is the saving from running a smaller team in quiet periods computed?"
+    gold_files: ["campus_qsr/offpeak.py"]
+    gold_symbols: ["campus_qsr.offpeak.staffing_flex"]
+
+  - id: qsr-06
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Where does the code step down from the average sale to what is actually left over?"
+    gold_files: ["campus_qsr/sku_economics.py"]
+    gold_symbols: ["campus_qsr.sku_economics.variable_cost_bridge"]
+
+  - id: qsr-07
+    repo: campus_qsr
+    type: lookup
+    question: "Where are the monthly profit and loss figures assembled?"
+    gold_files: ["campus_qsr/pnl.py"]
+    gold_symbols: ["campus_qsr.pnl.monthly_pnl"]
+
+  - id: qsr-08
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "What decides whether the outlet is shut on a particular date?"
+    gold_files: ["campus_qsr/calendar_model.py"]
+    gold_symbols: ["campus_qsr.calendar_model._closure_reason"]
+
+  - id: qsr-09
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Where is the membership plan sized against the overheads it has to cover?"
+    gold_files: ["campus_qsr/offpeak.py"]
+    gold_symbols: ["campus_qsr.offpeak.subscription"]
+
+  - id: qsr-10
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Where is the faster fixed-recipe service route modelled?"
+    gold_files: ["campus_qsr/throughput.py"]
+    gold_symbols: ["campus_qsr.throughput.express_line"]
+
+  - id: qsr-11
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Where are large figures grouped in the Indian lakh and crore style?"
+    gold_files: ["campus_qsr/report.py"]
+    gold_symbols: ["campus_qsr.report._fmt_inr"]
+
+  - id: qsr-12
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "What checks the inputs are internally consistent before anything is computed?"
+    gold_files: ["campus_qsr/assumptions.py"]
+    gold_symbols: ["campus_qsr.assumptions.Assumptions._validate"]
+
+  - id: qsr-13
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Where is the comparison against planning on a single flat daily number produced?"
+    gold_files: ["campus_qsr/calendar_model.py"]
+    gold_symbols: ["campus_qsr.calendar_model.flat_average_comparison"]
+
+  - id: qsr-14
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Which code ranks the products by how much they actually contribute?"
+    gold_files: ["campus_qsr/pnl.py"]
+    gold_symbols: ["campus_qsr.pnl.sku_contribution_concentration"]
+
+  - id: qsr-15
+    repo: campus_qsr
+    type: vocabulary_gap
+    question: "Where is the picture of demand across the whole year drawn?"
+    gold_files: ["campus_qsr/charts.py"]
+    gold_symbols: ["campus_qsr.charts.chart_seasonality"]
